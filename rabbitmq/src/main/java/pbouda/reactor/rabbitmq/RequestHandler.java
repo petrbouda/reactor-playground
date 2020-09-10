@@ -1,4 +1,4 @@
-package pbouda.reactor.rabbimq;
+package pbouda.reactor.rabbitmq;
 
 import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.server.ServerRequest;

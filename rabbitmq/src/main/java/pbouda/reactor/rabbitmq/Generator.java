@@ -1,4 +1,4 @@
-package pbouda.reactor.rabbimq;
+package pbouda.reactor.rabbitmq;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;

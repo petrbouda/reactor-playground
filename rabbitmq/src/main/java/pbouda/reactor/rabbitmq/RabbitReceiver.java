@@ -1,4 +1,4 @@
-package pbouda.reactor.rabbimq;
+package pbouda.reactor.rabbitmq;
 
 import com.rabbitmq.client.Delivery;
 import org.reactivestreams.Publisher;
@@ -7,7 +7,6 @@ import reactor.rabbitmq.RabbitFlux;
 import reactor.rabbitmq.Receiver;
 import reactor.rabbitmq.ReceiverOptions;
 
-import java.util.concurrent.locks.LockSupport;
 import java.util.function.Function;
 
 public class RabbitReceiver implements AutoCloseable {

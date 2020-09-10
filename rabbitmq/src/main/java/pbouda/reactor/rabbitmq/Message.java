@@ -1,4 +1,4 @@
-package pbouda.reactor.rabbimq;
+package pbouda.reactor.rabbitmq;
 
 public class Message {
     private String value;

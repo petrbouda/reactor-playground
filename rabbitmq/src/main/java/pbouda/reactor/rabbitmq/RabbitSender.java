@@ -1,4 +1,4 @@
-package pbouda.reactor.rabbimq;
+package pbouda.reactor.rabbitmq;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.FluxSink;

@@ -1,4 +1,4 @@
-package pbouda.reactor.rabbimq;
+package pbouda.reactor.rabbitmq;
 
 import com.rabbitmq.client.Address;
 import com.rabbitmq.client.ConnectionFactory;
