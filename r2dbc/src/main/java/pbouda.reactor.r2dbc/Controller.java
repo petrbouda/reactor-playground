@@ -16,7 +16,7 @@ public class Controller {
     }
 
     @GetMapping(path = "persons")
-    public Flux<Person> allPersons() {
+    public Flux<Person> persons() {
         return databaseClient.execute("SELECT * FROM person")
                 .map(Controller::toPerson)
                 .all();
@@ -24,11 +24,8 @@ public class Controller {
 
     private static Person toPerson(Row row) {
         return new Person(
-                row.get("correlationId", Integer.class),
                 row.get("personId", Integer.class),
                 row.get("lastname", String.class),
-                row.get("firstname", String.class),
-                row.get("city", String.class),
-                row.get("country", String.class));
+                row.get("firstname", String.class));
     }
 }
