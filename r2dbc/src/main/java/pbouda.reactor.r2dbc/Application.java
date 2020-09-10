@@ -63,10 +63,10 @@ public class Application {
     @Bean(destroyMethod = "dispose")
     public ConnectionPool connectionFactory(
             @Value("${database.host}") String host,
-            @Value("${database.port:26257}") int port,
-            @Value("${database.username:kyc}") String username,
-            @Value("${database.password:kyc}") String password,
-            @Value("${database.name:kyc}") String name,
+            @Value("${database.port}") int port,
+            @Value("${database.username}") String username,
+            @Value("${database.password}") String password,
+            @Value("${database.name}") String name,
             @Value("${database.sslEnabled:true}") boolean sslEnabled,
             @Value("${database.initConnections:5}") int initConnections,
             @Value("${database.maxConnections:10}") int maxConnections,
@@ -78,7 +78,7 @@ public class Application {
 
         PostgresqlConnectionConfiguration configuration =
                 PostgresqlConnectionConfiguration.builder()
-                        .applicationName("kyc")
+                        .applicationName("testapp")
                         .sslMode(sslEnabled ? SSLMode.REQUIRE : SSLMode.DISABLE)
                         .host(host)
                         .port(port)
