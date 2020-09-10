@@ -1,0 +1,7 @@
+# Project exclude paths
+/common/target/
+/hazelcast/target/
+/netty/target/
+/r2dbc/target/
+/rabbitmq/target/
+/wip/target/
