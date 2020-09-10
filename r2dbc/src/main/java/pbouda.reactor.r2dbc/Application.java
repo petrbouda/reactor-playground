@@ -29,7 +29,7 @@ public class Application {
             ApplicationContextInitializer<ConfigurableApplicationContext> {
 
         public static final CockroachContainer CONTAINER =
-                new CockroachContainer("czdcm-quay.lx.ifortuna.cz/testcontainers/cockroach:v19.2.4")
+                new CockroachContainer("cockroachdb/cockroach")
                         .withInitScript("init-script.sql");
 
         @Override
