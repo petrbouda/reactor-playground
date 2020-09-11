@@ -1,4 +1,4 @@
-# r2dbc-postgres-playground
+# Sharing Resources among all Netty-based framework (servers and clients) in one App
 
 ### Defaults
 ```
