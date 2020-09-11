@@ -1,4 +1,4 @@
-# Sharing Event-Loop-Group among all Netty-based frameworks (servers and clients) in a App
+# Sharing a single EventLoopGroup among all Netty-based frameworks (servers and clients) in a App
 
 ### Defaults
 ```
