@@ -38,15 +38,18 @@ public class ThenOperator {
     }
 
     /**
-     * 3
-     * 2
-     * 1
+     * reversed-3
+     * reversed-2
+     * reversed-1
      * Completed
      */
     private static void third() {
         Flux.just("1", "2", "3")
                 .map(number -> "transformed-" + number)
-                .thenMany(Flux.just("3", "2", "1"))
+                .thenMany(
+                        Flux.just("3", "2", "1")
+                                .map(i -> "reversed-" + i)
+                )
                 .doOnComplete(() -> System.out.println("Completed"))
                 .subscribe(System.out::println);
     }
