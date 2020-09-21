@@ -8,6 +8,7 @@ public class ThenOperator {
     public static void main(String[] args) {
         first();
         second();
+        third();
     }
 
     private static void first() {
@@ -33,6 +34,20 @@ public class ThenOperator {
                 // completion signal
                 .doOnSuccess(System.out::println)
                 // it's never called
+                .subscribe(System.out::println);
+    }
+
+    /**
+     * 3
+     * 2
+     * 1
+     * Completed
+     */
+    private static void third() {
+        Flux.just("1", "2", "3")
+                .map(number -> "transformed-" + number)
+                .thenMany(Flux.just("3", "2", "1"))
+                .doOnComplete(() -> System.out.println("Completed"))
                 .subscribe(System.out::println);
     }
 
