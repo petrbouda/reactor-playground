@@ -10,7 +10,7 @@ public class ReactorTcpServer {
                 .doOnBound(server -> System.out.println(server.host() + ":" + server.port()))
                 .doOnUnbound(server -> System.out.println("Killing the server!"))
                 .host("127.0.0.1")
-                .port(1234)
+                .port(1111)
                 .bind()
                 .block();
     }
